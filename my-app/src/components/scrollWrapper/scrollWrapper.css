@@ -1,0 +1,34 @@
+.scrollWrapper{
+    height: 100%;
+    width: calc(100% - 124px);
+    position: relative;
+    padding-top: 50px;
+}
+
+.scrollWrapper.fixed{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.scrollWrapper__scroll{
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.scrollWrapper__content{
+    width: calc(100% + 10px);
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.scrollWrapper__hidden{
+    width: calc(100% - 8px);
+    overflow-x: hidden;
+    height: 100%;
+}
