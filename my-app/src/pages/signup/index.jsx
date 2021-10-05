@@ -1,5 +1,4 @@
 import Signup from '../../components/signup';
-import ScrollWrapper from '../../components/scrollWrapper';
 
 export default function Registration(){
     return(
@@ -9,9 +8,7 @@ export default function Registration(){
                 <div className="header__user"></div>
             </header>
             <div className="main">
-                <ScrollWrapper>
                     <Signup/>
-                </ScrollWrapper>
             </div>
             <footer className="footer">
                 <div className="footer__company">© Treelone</div>

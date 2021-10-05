@@ -1,6 +1,3 @@
-import './menu.css'
-
-
 export default function SideMenu(props){
     const {isModer} = props;
     return(
@@ -15,7 +12,7 @@ export default function SideMenu(props){
                     <a className="side_menu__element bell"></a>
                 }
             </div>
-            <div className="side_menu__avatar" style="background-image:url(./images/side_avatar.svg)"></div>
+            <div className="side_menu__avatar" style={{backgroundImage:`url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Circle-icons-gamecontroller.svg/2048px-Circle-icons-gamecontroller.svg.png})`}}></div>
         </div>
     )
 }

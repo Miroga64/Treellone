@@ -2,13 +2,16 @@ import './styles/App.css';
 import Registration from './pages/signup';
 import Authentification from './pages/signin';
 import Text from './pages/text';
+import './styles/Menu.css'
+import './styles/index.css';
+
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
+import SkillsPage from './pages/skills';
 
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
         </Route>
         <Route path="/text">
             <Text />
+        </Route>
+        <Route path="/skills">
+          <SkillsPage/>
         </Route>
       </Switch>
     </Router>
