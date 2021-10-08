@@ -17,7 +17,6 @@ export default function ScrollWrapper(props){
 
     const handleScroll = () => {
         if(procent.current){
-            console.log(procent.current, wrapper.current.scrollTop)
             setScrollWidth(procent.current * wrapper.current.scrollTop)
         }
     }

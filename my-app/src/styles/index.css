@@ -204,7 +204,7 @@
     margin-left: 16px;
     margin-right: 16px;
     overflow: hidden;
-    height: 20px;
+    height: 36px;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
@@ -1338,7 +1338,7 @@
     justify-content: center;
     height: 100%;
     position: relative;
-    max-width: calc(100% - 104px);
+    max-width: 100%;
 }
 @media (max-width: 805px) {
     .page {

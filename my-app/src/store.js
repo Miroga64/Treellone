@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import userReducer from './slice/formSlice'
 import skillsReducer from './slice/skillsSlice'
+import modulesReducer from './slice/newModulesSlice';
 
 const store = configureStore({
     reducer:{
         user: userReducer,
-        skills: skillsReducer
+        skills: skillsReducer, 
+        modules: modulesReducer,
     }
 });
 store.subscribe(() => console.log(store.getState()));
