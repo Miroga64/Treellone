@@ -1,8 +1,12 @@
-import './styles/App.css';
 import Registration from './pages/signup';
 import Authentification from './pages/signin';
-import Text from './pages/text';
+import TextPage from './pages/text';
+import SkillsPage from './pages/skills';
+
+import './styles/App.css';
 import './styles/Menu.css'
+import './styles/slick.css'
+import './styles/slick-theme.css'
 import './styles/index.css';
 
 
@@ -11,7 +15,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import SkillsPage from './pages/skills';
+
 
 
 function App() {
@@ -25,7 +29,7 @@ function App() {
             <Registration />
         </Route>
         <Route path="/text">
-            <Text />
+            <TextPage />
         </Route>
         <Route path="/skills">
           <SkillsPage/>

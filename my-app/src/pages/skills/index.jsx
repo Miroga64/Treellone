@@ -1,6 +1,7 @@
 import SideMenu from "../../components/menu";
 import Skills from "../../components/skills";
 import NewModules from "../../components/modules";
+import Course from "../../components/course";
 
 export default function SkillsPage(){
     return(
@@ -10,6 +11,7 @@ export default function SkillsPage(){
                 <Skills/>
             </div>
             <NewModules/>
+            <Course/>
         </main>
     )
 }

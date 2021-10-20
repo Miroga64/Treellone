@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTable } from '../../slice/skillsSlice'
 import { setIsActive, setSelectedCell } from '../../slice/newModulesSlice'
+import { incrementAsync, setActive } from '../../slice/courseSlice'
 
 export default function Skills(){
     const matrix = useSelector(selectTable)
@@ -11,7 +12,39 @@ export default function Skills(){
     const toggleEdit = () => {
         setIsShow(!isShow);
     }
-
+    const setActiveCourse = () => {
+        const obj = {
+                name: 'Course_name',
+                id: '141243',
+                prevCourse: {
+                    name: 'Prev Course Name',
+                    id: '1413123'
+                },
+                lessons:[
+                    {
+                        name: 'First lesson Name',
+                        isComplite: false,
+                        id: '1231238'
+                    },
+                    {
+                        name: 'Second lesson Name',
+                        isComplite: false,
+                        id: '1231238'
+                    },
+                    {
+                        name: 'Third lesson Name',
+                        isComplite: true,
+                        id: '1231238'
+                    },
+                    {
+                        name: 'Fourth lesson Name',
+                        isComplite: false,
+                        id: '1231238'
+                    }
+                ]
+            }
+        dispatch(incrementAsync(obj))
+    }
     const ElementClick = (id) => {
         dispatch(setIsActive(true))
         dispatch(setSelectedCell(id))
@@ -42,7 +75,12 @@ export default function Skills(){
                     }
 
                     return (
-                        <div className={elementClass} onClick={() => {ElementClick(key_id)}}>
+                        <div className={elementClass} 
+                            onClick={() => {
+                                isShow ? ElementClick(key_id) : setActiveCourse()
+                                }
+                            }
+                        >
                             {id && 
                                 <>
                                     <div className="skills__element__cross"></div>

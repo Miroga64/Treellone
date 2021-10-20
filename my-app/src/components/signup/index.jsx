@@ -110,7 +110,12 @@ export default function Signup(){
                         options={inputVal.options ? inputVal.options : null}
                     />
                 })}
-                <input key="submit" type="submit" value="Зарегистрироваться"/>
+                <input key="submit" type="submit" value="Зарегистрироваться" 
+                    onClick={(e) => {
+                        e.preventDefault();
+                        setNewUser();
+                    }}
+                />
                 <NavLink to="/signin" className="come_in">
                     Войти
                 </NavLink>

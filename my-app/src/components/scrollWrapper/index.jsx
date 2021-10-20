@@ -6,11 +6,11 @@ import './scrollWrapper.css'
 export default function ScrollWrapper(props){
     const [scrollWrapperClass, setScrollWrapperClass] = useState("scrollWrapper")
     const wrapper = useRef(null)
-    const [scrollWitdh, setScrollWidth] = useState(0)
+    const { scrollWidth, setScrollWidth } = props;
     let procent = useRef(0);
   
     useEffect(() => {
-        let difference = wrapper.current.offsetHeight - window.innerHeight;
+        let difference = wrapper.current.offsetHeight - window.innerHeight / 3;
         procent.current = 100 / difference;
         setScrollWrapperClass("scrollWrapper fixed")
     }, [])
@@ -23,7 +23,7 @@ export default function ScrollWrapper(props){
    
     return(
         <div className={scrollWrapperClass}>
-            <div class="scrollWrapper__scroll" style={{width: `${scrollWitdh}%`}}></div>
+            <div class="scrollWrapper__scroll" style={{width: `${scrollWidth}%`}}></div>
             <div class="scrollWrapper__hidden">
                 <div class="scrollWrapper__content" ref={wrapper} onScroll={handleScroll}>
                     {props.children}

@@ -1,8 +1,6 @@
 .scrollWrapper{
-    height: 100%;
-    width: calc(100% - 124px);
+    width: calc(100% - 105px);
     position: relative;
-    padding-top: 50px;
 }
 
 .scrollWrapper.fixed{
@@ -17,18 +15,20 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 10000;
 }
 
 .scrollWrapper__content{
     width: calc(100% + 10px);
     position: relative;
     height: 100%;
+    overflow-x: hidden;
     overflow-y: auto;
     padding-right: 10px;
 }
 
 .scrollWrapper__hidden{
-    width: calc(100% - 8px);
+    width: 100%;
     overflow-x: hidden;
     height: 100%;
 }
