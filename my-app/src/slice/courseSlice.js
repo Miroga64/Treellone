@@ -12,7 +12,7 @@ export const slice = createSlice({
         },
         setActive: (state, action) => {
             state.isActive = action.payload
-        }
+        },
     },
 });
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTable } from '../../slice/skillsSlice'
 import { setIsActive, setSelectedCell } from '../../slice/newModulesSlice'
-import { incrementAsync, setActive } from '../../slice/courseSlice'
+import { incrementAsync } from '../../slice/courseSlice'
 
 export default function Skills(){
     const matrix = useSelector(selectTable)
@@ -12,6 +12,7 @@ export default function Skills(){
     const toggleEdit = () => {
         setIsShow(!isShow);
     }
+    
     const setActiveCourse = () => {
         const obj = {
                 name: 'Course_name',

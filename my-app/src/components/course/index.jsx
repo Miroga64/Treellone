@@ -8,7 +8,6 @@ export default function Course(props){
     const course = useSelector(selectCourse)
     const active = useSelector(selectCourseActive)
     const dispatch = useDispatch()
-    console.log(active)
 
     return(
         <>

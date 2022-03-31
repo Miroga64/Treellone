@@ -31,7 +31,11 @@ export default function NewModules(){
                         <div className="add_modules__subtitle">Твои купленные модули. Кликни на нужный и он будет добавлен на карту. </div>
                         <Slider {...options}>
                             {newModules.map((el, i) => (
-                                <div key={parseInt(el.id)} className="add_modules__element" onClick={() => dispatch(setRow([cell, el]))}>
+                                <div key={parseInt(el.id)} className="add_modules__element" 
+                                    onClick={() => {
+                                        dispatch(setRow([cell, el]))
+                                        dispatch(setIsActive(false))
+                                    }}>
                                     <div className="add_modules__image" style={{backgroundImage: `url(${el.sliderIcon})`}}></div>
                                     <div className="add_modules__name">{el.hoverText}</div>
                                     <div className="add_modules__categories">{el.category}</div>

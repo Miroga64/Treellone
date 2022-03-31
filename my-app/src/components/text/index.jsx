@@ -1,10 +1,7 @@
-// import BannerText from './banner_text.png'
-// import TextSlider from './text_slider.png'
-// import MarksPage from './marks_page.png'
+
 import { selectCourseContent } from '../../slice/textSlice'
 import { useSelector } from 'react-redux'
 import Slider from "react-slick";
-
 
 export default function Text(props){
 
@@ -42,7 +39,7 @@ export default function Text(props){
                         console.log(el)
 
                         return (
-                            <div class="text__content__padding">
+                            <div className="text__content__padding">
                                 {el.map((elem, id) => {
                                     switch (elem.type){
                                         case 'text':

@@ -23,9 +23,9 @@ export default function ScrollWrapper(props){
    
     return(
         <div className={scrollWrapperClass}>
-            <div class="scrollWrapper__scroll" style={{width: `${scrollWidth}%`}}></div>
-            <div class="scrollWrapper__hidden">
-                <div class="scrollWrapper__content" ref={wrapper} onScroll={handleScroll}>
+            <div className="scrollWrapper__scroll" style={{width: `${scrollWidth}%`}}></div>
+            <div className="scrollWrapper__hidden">
+                <div className="scrollWrapper__content" ref={wrapper} onScroll={handleScroll}>
                     {props.children}
                 </div>
             </div>

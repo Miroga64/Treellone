@@ -2,10 +2,15 @@ import { useState } from "react"
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../slice/formSlice'
 import Input from '../input'
-import { NavLink } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
 export default function Signin(){
     const dispatch = useDispatch();
+    let history = useHistory();
+
+    const handleClick = () => {
+        history.push("/signup");
+    }
 
     const [inputValues, setInputValues] = useState({
         login: {
@@ -55,9 +60,9 @@ export default function Signin(){
                     />
                 })}
                 <input key="submit" type="submit" value="Войти"/>
-                <NavLink to="/signup" className="come_in">
+                <div onClick={handleClick} className="come_in">
                     Регистрация
-                </NavLink>
+                </div>
             </form>
         </div>
     )
